@@ -22,4 +22,11 @@ interface IIOHandler
     /// <param name="message"></param>
     /// <returns>success or fail message</returns>
     string AppendToFile(string path, string message);
+
+    /// <summary>
+    /// Checks if file exists, tries to read text from file
+    /// </summary>
+    /// <param name="message"></param>
+    /// <returns>Contents from file or error message</returns>
+    string ReadFile(string path);
 }
