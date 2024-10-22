@@ -4,6 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        IOHandler iOHandler = new();
+        string path = "test.txt";
+        string message = "Hello World!";
+        iOHandler.AppendToFile(path, message);
     }
 }
