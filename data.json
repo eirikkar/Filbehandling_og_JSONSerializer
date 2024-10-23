@@ -13,5 +13,25 @@
     "name": "Toyota",
     "model": "Hilux",
     "year": 2005
+  },
+  {
+    "name": "Volvo",
+    "model": "V-50",
+    "year": 2005
+  },
+  {
+    "name": "Skoda",
+    "model": "Octavia",
+    "year": 2013
+  },
+  {
+    "name": "Skoda",
+    "model": "Superb",
+    "year": 2015
+  },
+  {
+    "name": "Honda",
+    "model": "Civic",
+    "year": 1995
   }
 ]
