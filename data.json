@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Audi",
+    "model": "A-4",
+    "year": 1999
+  },
+  {
+    "name": "Volvo",
+    "model": "V-70",
+    "year": 2001
+  },
+  {
+    "name": "Toyota",
+    "model": "Hilux",
+    "year": 2005
+  }
+]

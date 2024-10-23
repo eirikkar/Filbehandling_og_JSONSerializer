@@ -2,16 +2,39 @@
 
 class Program
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        // Creates a new iOHandler instance
-        IOHandler iOHandler = new();
-        // Path and message
+        //Den første opgaven, jeg la den inn i en metode for å gjøre det lettere å lese
+        FirstTask();
+        // Path to JSON file
+        string JSONpath = "data.json";
+        // Instantiating a new Car object and a new list of cars
+        Car car = new();
+        var cars = car.ReadFromJsonFile(JSONpath);
+        Console.WriteLine("Please input a car name: ");
+        string? name = Utility.StringParser(Console.ReadLine());
+        Console.WriteLine("Please input a car model: ");
+        string? model = Utility.StringParser(Console.ReadLine());
+        Console.WriteLine("Please input a car year: ");
+        int year = Utility.NumberParser(Console.ReadLine());
+        var NewCar = new Car
+        {
+            name = name,
+            model = model,
+            year = year,
+        };
+        cars?.Add(NewCar);
+        car.WriteToJsonFile(JSONpath, cars);
+    }
+
+    private static void FirstTask()
+    {
         string path = "test.txt";
         string message = "Hello World!";
 
-        // Appends to file and reads the file to the console.
+        IOHandler iOHandler = new();
         iOHandler.AppendToFile(path, message);
-        Console.WriteLine(iOHandler.ReadFile(path));
+        // Denne er kommentert ut fordi den skriver ut i konsollen
+        //Console.WriteLine(iOHandler.ReadFile(path));
     }
 }

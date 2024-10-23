@@ -71,6 +71,7 @@ class IOHandler : IIOHandler
         {
             return $"Error reading the content of the file {path} {e.Message}";
         }
+        //Forstår ikke hvorfor jeg må ha denne return, noe jeg mangler?
         return "Unknown error occured";
     }
 }
