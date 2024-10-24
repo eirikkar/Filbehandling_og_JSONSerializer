@@ -8,7 +8,7 @@ public static class HttpClientExtensions
     /// <param name="httpClient"></param>
     /// <param name="jokePath"></param>
     /// <returns></returns>
-    public static async Task GetJokes(this System.Net.Http.HttpClient httpClient, string jokePath)
+    public static async Task GetJokes(this HttpClient httpClient, string jokePath)
     {
         try
         {
