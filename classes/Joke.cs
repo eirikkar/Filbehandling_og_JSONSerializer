@@ -8,12 +8,19 @@ public class Joke : IJoke
 
     public void ExtractJoke(string path)
     {
-        Console.Clear();
-        string json = File.ReadAllText(path);
-        var joke = JsonSerializer.Deserialize<Joke>(json);
-        Console.WriteLine(joke?.JokeBody);
-        Console.WriteLine();
-        Console.WriteLine("Press any key to continue...");
-        Console.ReadKey();
+        try
+        {
+            Console.Clear();
+            string json = File.ReadAllText(path);
+            var joke = JsonSerializer.Deserialize<Joke>(json);
+            Console.WriteLine(joke?.JokeBody);
+            Console.WriteLine();
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
     }
 }

@@ -4,8 +4,6 @@ class Program
 {
     public static async Task Main(string[] args)
     {
-        //Den første opgaven la jeg la den inn i en metode for å gjøre det lettere å lese
-
         // Path to JSON file
         string JSONpath = "data.json";
         string JokePath = "jokes.json";
@@ -51,6 +49,9 @@ class Program
         }
     }
 
+    /// <summary>
+    /// Function that contains the first task
+    /// </summary>
     private static void FirstTask()
     {
         Console.Clear();

@@ -10,10 +10,17 @@ public static class HttpClientExtensions
     /// <returns></returns>
     public static async Task GetJokes(this System.Net.Http.HttpClient httpClient, string jokePath)
     {
-        var response = await httpClient.GetStringAsync(
-            "https://v2.jokeapi.dev/joke/Programming?type=single"
-        );
+        try
+        {
+            var response = await httpClient.GetStringAsync(
+                "https://v2.jokeapi.dev/joke/Programming?type=single"
+            );
 
-        await File.WriteAllTextAsync(jokePath, response);
+            await File.WriteAllTextAsync(jokePath, response);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
     }
 }

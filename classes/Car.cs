@@ -8,19 +8,34 @@ class Car : ICar
 
     public void WriteToJsonFile(string path, List<Car>? cars)
     {
-        string json = JsonSerializer.Serialize(
-            cars,
-            new JsonSerializerOptions { WriteIndented = true }
-        );
-        File.WriteAllText(path, json);
+        try
+        {
+            string json = JsonSerializer.Serialize(
+                cars,
+                new JsonSerializerOptions { WriteIndented = true }
+            );
+            File.WriteAllText(path, json);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
     }
 
     public List<Car>? ReadFromJsonFile(string path)
     {
-        _ = new List<Car>();
-        string json = File.ReadAllText(path);
-        List<Car>? cars = JsonSerializer.Deserialize<List<Car>>(json);
-        return cars;
+        try
+        {
+            _ = new List<Car>();
+            string json = File.ReadAllText(path);
+            List<Car>? cars = JsonSerializer.Deserialize<List<Car>>(json);
+            return cars;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return null;
+        }
     }
 
     public void ListAllCars(List<Car>? cars)
