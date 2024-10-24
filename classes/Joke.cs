@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-public class Joke
+public class Joke : IJoke
 {
     [JsonPropertyName("joke")]
     public string? JokeBody { get; set; }

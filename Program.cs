@@ -5,7 +5,6 @@ class Program
     public static async Task Main(string[] args)
     {
         //Den første opgaven la jeg la den inn i en metode for å gjøre det lettere å lese
-        FirstTask();
 
         // Path to JSON file
         string JSONpath = "data.json";
@@ -28,7 +27,8 @@ class Program
             Console.WriteLine("1. Add Car");
             Console.WriteLine("2. List all cars");
             Console.WriteLine("3. Show a joke");
-            Console.WriteLine("4. Exit");
+            Console.WriteLine("4. First task");
+            Console.WriteLine("5. Exit");
             switch (Console.ReadLine())
             {
                 case "1":
@@ -42,6 +42,9 @@ class Program
                     joke.ExtractJoke(JokePath);
                     break;
                 case "4":
+                    FirstTask();
+                    break;
+                case "5":
                     Exit = true;
                     break;
             }
@@ -50,12 +53,17 @@ class Program
 
     private static void FirstTask()
     {
+        Console.Clear();
         string path = "test.txt";
-        string message = "Hello World!";
+        Console.WriteLine("Please input a message to write to the file: ");
+        string? message = Utility.StringParser(Console.ReadLine());
 
         IOHandler iOHandler = new();
-        iOHandler.AppendToFile(path, message);
-        // Denne er kommentert ut fordi den skriver ut i konsollen
-        //Console.WriteLine(iOHandler.ReadFile(path));
+        iOHandler.WriteToFile(path, message);
+        Console.WriteLine();
+        Console.WriteLine("Successfully written to file: ");
+        Console.WriteLine(iOHandler.ReadFile(path));
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
     }
 }

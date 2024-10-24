@@ -33,5 +33,10 @@
     "name": "Honda",
     "model": "Civic",
     "year": 1995
+  },
+  {
+    "name": "Ferrari",
+    "model": "F-40",
+    "year": 1990
   }
 ]

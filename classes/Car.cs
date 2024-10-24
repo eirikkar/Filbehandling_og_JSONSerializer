@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-class Car
+class Car : ICar
 {
     public string? name { get; set; }
     public string? model { get; set; }
