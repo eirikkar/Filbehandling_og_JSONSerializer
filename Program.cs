@@ -2,7 +2,7 @@
 
 class Program
 {
-    public static async Task Main(string[] args)
+    static async Task Main(string[] args)
     {
         // Path to JSON file
         string JSONpath = "data.json";
@@ -40,31 +40,12 @@ class Program
                     joke.ExtractJoke(JokePath);
                     break;
                 case "4":
-                    FirstTask();
+                    TheFirstTask.FirstTask();
                     break;
                 case "5":
                     Exit = true;
                     break;
             }
         }
-    }
-
-    /// <summary>
-    /// Function that contains the first task
-    /// </summary>
-    private static void FirstTask()
-    {
-        Console.Clear();
-        string path = "test.txt";
-        Console.WriteLine("Please input a message to write to the file: ");
-        string? message = Utility.StringParser(Console.ReadLine());
-
-        IOHandler iOHandler = new();
-        iOHandler.WriteToFile(path, message);
-        Console.WriteLine();
-        Console.WriteLine("Successfully written to file: ");
-        Console.WriteLine(iOHandler.ReadFile(path));
-        Console.WriteLine("Press any key to continue...");
-        Console.ReadKey();
     }
 }
