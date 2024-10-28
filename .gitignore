@@ -1,3 +1,4 @@
 bin/
 obj/
-data/
+data/jokes.json
+data/test.txt
