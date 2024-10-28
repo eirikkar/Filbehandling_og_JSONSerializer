@@ -6,7 +6,7 @@ class TheFirstTask
     public static void FirstTask()
     {
         Console.Clear();
-        string path = "test.txt";
+        string path = "data/test.txt";
         Console.WriteLine("Please input a message to write to the file: ");
         string? message = Utility.StringParser(Console.ReadLine());
 

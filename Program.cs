@@ -5,8 +5,8 @@ class Program
     static async Task Main(string[] args)
     {
         // Path to JSON file
-        string JSONpath = "data.json";
-        string JokePath = "jokes.json";
+        string JSONpath = "data/data.json";
+        string JokePath = "data/jokes.json";
 
         // Instantiating a new Car object and a new list of cars
         Car car = new();
