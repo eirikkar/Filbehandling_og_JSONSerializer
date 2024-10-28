@@ -21,7 +21,7 @@ class Program
         while (!Exit)
         {
             Console.Clear();
-            Console.WriteLine("Main Menu");
+            Console.WriteLine("Main menu");
             Console.WriteLine("1. Add Car");
             Console.WriteLine("2. List all cars");
             Console.WriteLine("3. Show a joke");
